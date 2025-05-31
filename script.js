@@ -61,3 +61,13 @@ const renderTasks = () => {
     });
   };
   
+const addTask = () => {
+    const input = document.getElementById("taskInput");
+    const text = input.value.trim();
+    if (text === "") return;
+    tasks.push({ text, done: false });
+    input.value = "";
+    saveTasks();
+    renderTasks();
+  };
+  
