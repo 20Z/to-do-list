@@ -41,11 +41,11 @@ const renderTasks = () => {
     };
 
     const edit = document.createElement("i");
-    edit.textContent = "✏️";
+    edit.innerHTML = '<i class="mc mc-writable-book mc-xl"></i>';
     edit.onclick = () => showEditPopup(index);
 
     const del = document.createElement("i");
-    del.textContent = "🗑️";
+    del.innerHTML = '<i class="mc mc-barrier mc-xl"></i>';
     del.onclick = () => showDeleteConfirm(index);
 
     const icons = document.createElement("div");
