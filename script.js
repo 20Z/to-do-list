@@ -63,7 +63,7 @@ const renderTasks = () => {
 const addTask = () => {
   const input = document.getElementById("taskInput");
   const text = input.value.trim();
-  if (text === "") return;
+  if (!validateTaskInput(text)) return;
   tasks.push({ text, done: false });
   input.value = "";
   saveTasks();
@@ -103,6 +103,8 @@ const showEditPopup = (index) => {
 
   document.getElementById("saveEditBtn").onclick = () => {
     const newText = input.value.trim();
+    if (!validateTaskInput(newText)) return;
+
     if (newText) {
       tasks[index].text = newText;
       saveTasks();
@@ -136,4 +138,31 @@ const showDeleteConfirm = (index) => {
   };
 };
 
+
+const showError = (message) => {
+    const popup = document.getElementById("errorPopup");
+    const msg = document.getElementById("errorText");
+    msg.textContent = message;
+    popup.style.display = "block";
+  
+    document.getElementById("closeErrorBtn").onclick = () => {
+      popup.style.display = "none";
+    };
+  };
+  const validateTaskInput = (text) => {
+    if (!text.trim()) {
+      showError("Task cannot be empty.");
+      return false;
+    }
+    if (/^\d/.test(text)) {
+      showError("Task cannot start with a number.");
+      return false;
+    }
+    if (text.length < 5) {
+      showError("Task must be at least 5 characters long.");
+      return false;
+    }
+    return true;
+  };
+  
 window.onload = () => renderTasks();

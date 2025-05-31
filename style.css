@@ -130,3 +130,10 @@ body {
     cursor: pointer;
     font-size: 16px;
   }
+
+  .text-danger {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
