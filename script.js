@@ -169,13 +169,32 @@ const showError = (message) => {
     return true;
   };
   
-  const copyLink = () => {
-    const input = document.getElementById("shareLink");
-    navigator.clipboard.writeText(input.value)
-      
+ 
+
+  const randoms2 = [
+    "What fake goal are you lying to yourself about today?",
+    "Adding tasks you’ll ignore later…",
+    "So many tasks, so little motivation.",
+    "Which excuse will win today?",
+    "Don’t worry, tomorrow you’ll definitely start. Maybe."
+  ];
+
+  const setRandom = () => {
+    const randomIndex = Math.floor(Math.random() * randoms2.length);
+    document.getElementById("randoms").textContent = randoms2[randomIndex];
+  };
+  
+  
+  window.onload = () => {
+    setRandom();
+    renderTasks();
   };
 
-  document.getElementById("copyBtn").addEventListener("click", copyLink);
 
 
-window.onload = () => renderTasks();
+  const copyLink = () => {
+    const input = document.getElementById("shareLink");
+    const textToCopy = input && input.value ? input.value : "";
+    navigator.clipboard.writeText(textToCopy) 
+  };
+  
