@@ -89,12 +89,14 @@ const deleteAllTasks = () => {
   showDeleteConfirm("all");
 };
 
-const generateShareLink = () => {
-  const encoded = btoa(JSON.stringify(tasks));
-  const link = `${location.origin}${location.pathname}?data=${encoded}`;
-  document.getElementById("shareLink").value = link;
-};
 
+const generateShareLink = () => {
+    const utf8Encoded = new TextEncoder().encode(JSON.stringify(tasks));
+    const base64String = btoa(String.fromCharCode(...utf8Encoded));
+    const link = `${location.origin}${location.pathname}?data=${base64String}`;
+    document.getElementById("shareLink").value = link;
+  };
+  
 const showEditPopup = (index) => {
   const popup = document.getElementById("editPopup");
   const input = document.getElementById("editInput");
