@@ -5,5 +5,16 @@ body {
     padding: 20px;
 }
 .main{
-   
+   max-width: 800px;
+   margin:  auto;
+   background-color: #fff;
+   padding: 25px;
+   border-radius: 10px;
+  box-shadow: 0 4px 12px black;
 }
+.todo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
