@@ -71,3 +71,25 @@ body {
     justify-content: space-between;
     align-items: center;
   }
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  
+  .delete-done {
+    background: #ff9999;
+  }
+  
+  .delete-all {
+    background: #ff4d4d;
+  }
+
+
+  .delete-done:hover {
+    background: #f32d2d;
+  }
+  
+  .delete-all:hover {
+    background: #f32d2d;
+  }
