@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/minecraftia" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.mcicons.dev/releases/v1.0.0/css/all.css">
 
 </head>
 <body>
     <div class="main">
-        <h1>To Do List <i class="mc mc-diamond mc-xl"></i> </h1>
-        <h3>What fake goal are you lying to yourself about today?</h3>
+        <h1 >To Do List <i class="mc mc-diamond mc-xl"></i> </h1>
+        <h3 >What fake goal are you lying to yourself about today?</h3>
         <div class="todo-input">
             <input type="text" id="taskInput" placeholder="✍🏻 New Todo...">
             <button onclick="addTask()">Add New Task</button>
             <button onclick="generateShareLink()">Share </button>
             <input type="text" id="shareLink" readonly placeholder="link will appear here">
         </div>
-        <h2>To do List <i class="mc mc-chest"></i></h2>
+        <h2 >To do List <i class="mc mc-chest"></i></h2>
         <div class="tabs">
-            <button onclick="filterTasks('all')" class="tab active">All</button>
+            <button onclick="filterTasks('all')" class="tab active" >All</button>
             <button onclick="filterTasks('done')" class="tab">Done</button>
             <button onclick="filterTasks('todo')" class="tab">Todo</button>
         </div>
