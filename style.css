@@ -57,4 +57,17 @@ body {
   .tab.active {
     box-shadow: 0 2px 3px black;
   }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
   
+  li {
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
