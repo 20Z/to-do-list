@@ -37,3 +37,24 @@ body {
   button:hover {
     background: #007799;
   }
+
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 10px;
+    background: #0099bb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    box-shadow: 0 2px 3px black;
+  }
+  
