@@ -121,4 +121,12 @@ body {
   .popup-buttons button {
     width: 40%;
   }
+  .icons {
+    display: flex;
+    gap: 10px;
+  }
   
+  .icons i {
+    cursor: pointer;
+    font-size: 16px;
+  }
