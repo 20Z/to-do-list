@@ -169,4 +169,13 @@ const showError = (message) => {
     return true;
   };
   
+  const copyLink = () => {
+    const input = document.getElementById("shareLink");
+    navigator.clipboard.writeText(input.value)
+      
+  };
+
+  document.getElementById("copyBtn").addEventListener("click", copyLink);
+
+
 window.onload = () => renderTasks();
