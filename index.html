@@ -5,33 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.mcicons.dev/releases/v1.0.0/css/all.css">
+
 </head>
 <body>
     <div class="main">
-        <h1>To Do List ✨</h1>
+        <h1>To Do List <i class="mc mc-diamond mc-xl"></i> </h1>
         <h3>What fake goal are you lying to yourself about today?</h3>
         <div class="todo-input">
             <input type="text" id="taskInput" placeholder="✍🏻 New Todo...">
-            <button>Add New Task</button>
-            <button>Share</button>
+            <button onclick="addTask()">Add New Task</button>
+            <button onclick="generateShareLink()">Share </button>
             <input type="text" id="shareLink" readonly placeholder="link will appear here">
         </div>
-        <h2>To do List</h2>
+        <h2>To do List <i class="mc mc-chest"></i></h2>
         <div class="tabs">
-            <button class="tab active">All</button>
-            <button class="tab">Done</button>
-            <button class="tab">Todo</button>
+            <button onclick="filterTasks('all')" class="tab active">All</button>
+            <button onclick="filterTasks('done')" class="tab">Done</button>
+            <button onclick="filterTasks('todo')" class="tab">Todo</button>
         </div>
 
 
         <ul id="taskList"></ul>
 
         <div class="actions">
-            <button  class="delete-done">Delete Done Tasks</button>
-            <button  class="delete-all">Delete All Tasks</button>
+            <button onclick="deleteDoneTasks()" class="delete-done">Delete Done Tasks</button>
+            <button onclick="deleteAllTasks()" class="delete-all">Delete All Tasks</button>
           </div>
 
     </div>
     <script src="script.js"></script>
+
+
+    <div id="editPopup" class="popup">
+        <div class="popup-content">
+          <h3>Edit Task</h3>
+          <input type="text" id="editInput">
+          <div class="popup-buttons">
+            <button id="saveEditBtn">Save</button>
+            <button id="cancelEditBtn">Cancel</button>
+          </div>
+        </div>
+      </div>
+      
+      <div id="deleteConfirmPopup" class="popup">
+        <div class="popup-content">
+          <h3>Are you sure you want to delete?</h3>
+          <div class="popup-buttons">
+            <button id="confirmDel">Yes</button>
+            <button id="cancelDel">No</button>
+          </div>
+        </div>
+      </div>
 </body>
 </html>
