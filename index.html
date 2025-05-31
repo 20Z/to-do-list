@@ -18,17 +18,17 @@
         </div>
         <h2>To do List</h2>
         <div class="tabs">
-            <button class="tab active">All</button>
-            <button class="tab">Done</button>
-            <button class="tab">Todo</button>
+            <button onclick="filterTasks('all')" class="tab active">All</button>
+            <button onclick="filterTasks('done')" class="tab">Done</button>
+            <button onclick="filterTasks('todo')" class="tab">Todo</button>
         </div>
 
 
         <ul id="taskList"></ul>
 
         <div class="actions">
-            <button  class="delete-done">Delete Done Tasks</button>
-            <button  class="delete-all">Delete All Tasks</button>
+            <button onclick="deleteDoneTasks()" class="delete-done">Delete Done Tasks</button>
+            <button onclick="deleteAllTasks()" class="delete-all">Delete All Tasks</button>
           </div>
 
     </div>
