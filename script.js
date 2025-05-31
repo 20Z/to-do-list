@@ -3,8 +3,10 @@ let tasks = [];
 const params = new URLSearchParams(window.location.search);
 if (params.has("data")) {
   try {
-    const decoded = atob(params.get("data"));
-    tasks = JSON.parse(decoded);
+    const base64 = params.get("data");
+    const binary = atob(base64);
+    const bytes = new Uint8Array([...binary].map(char => char.charCodeAt(0)));
+    const decoded = new TextDecoder().decode(bytes);    tasks = JSON.parse(decoded);
     localStorage.setItem("tasks", JSON.stringify(tasks));
   } catch (e) {
     alert("Invalid shared link.");
