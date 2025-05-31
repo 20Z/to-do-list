@@ -5,5 +5,91 @@ body {
     padding: 20px;
 }
 .main{
-   
+   max-width: 800px;
+   margin:  auto;
+   background-color: #fff;
+   padding: 25px;
+   border-radius: 10px;
+  box-shadow: 0 4px 12px black;
 }
+.todo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background: #0099bb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #007799;
+  }
+
+  .tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 10px;
+    background: #0099bb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    box-shadow: 0 2px 3px black;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+  }
+  
+  .delete-done {
+    background: #ff9999;
+  }
+  
+  .delete-all {
+    background: #ff4d4d;
+  }
+
+
+  .delete-done:hover {
+    background: #f32d2d;
+  }
+  
+  .delete-all:hover {
+    background: #f32d2d;
+  }
